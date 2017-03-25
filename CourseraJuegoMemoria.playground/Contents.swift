@@ -19,9 +19,9 @@ La interpolación de variables para realizar la impresión de cada número.
 
 import UIKit
 
-var str = "Hello, playground"
+var numeros = 0...100
 
-for numero in 0...100 {
+for numero in numeros {
  
     if(numero % 5 == 0){
         print("# \(numero) Bingo!!!")
