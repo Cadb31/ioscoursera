@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Z9F-8R-T4w">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Selección de Tamaño-->
+        <scene sceneID="Vqm-1F-Rlh">
+            <objects>
+                <tableViewController id="vH6-Kq-jx1" customClass="TamanioViewController" customModule="PizzeriaIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="xjE-50-GjB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LabelCellTamanio" id="qQ1-0F-2Us">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qQ1-0F-2Us" id="fqD-xm-eFv">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="vH6-Kq-jx1" id="cz0-Px-HdO"/>
+                            <outlet property="delegate" destination="vH6-Kq-jx1" id="GCs-PR-cXs"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Selección de Tamaño" id="ClR-te-BPj">
+                        <barButtonItem key="backBarButtonItem" title="Tamaño" id="aIM-P3-m54"/>
+                        <barButtonItem key="rightBarButtonItem" image="masa" id="UBV-yV-CFw">
+                            <connections>
+                                <segue destination="jb6-ad-QhX" kind="show" id="2bO-rl-tNk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="masaButton" destination="UBV-yV-CFw" id="phG-Pl-uAL"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tyV-ql-S0y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1607" y="-63"/>
+        </scene>
+        <!--Selección de Queso-->
+        <scene sceneID="VRo-fB-39a">
+            <objects>
+                <tableViewController id="Ujr-85-GZN" customClass="QuesoViewController" customModule="PizzeriaIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="n2F-aG-JCv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LabelCellQueso" id="Mku-wY-UnH">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Mku-wY-UnH" id="lhX-wO-P0S">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Ujr-85-GZN" id="KlH-GX-zdV"/>
+                            <outlet property="delegate" destination="Ujr-85-GZN" id="RnL-RO-HWl"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Selección de Queso" id="ciO-Dv-Cde">
+                        <barButtonItem key="leftBarButtonItem" image="masa" id="Izi-fL-pI2">
+                            <connections>
+                                <segue destination="jb6-ad-QhX" kind="show" id="Bmm-AR-dLJ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="ingredientes" id="SDP-U1-nCA">
+                            <connections>
+                                <segue destination="pEk-TP-83L" kind="show" id="jd2-yG-CEq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="ingredientesButton" destination="SDP-U1-nCA" id="3AD-NA-GBF"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3ii-g6-XGa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1967" y="-63"/>
+        </scene>
+        <!--Selección de Masa-->
+        <scene sceneID="6cz-JB-rYp">
+            <objects>
+                <tableViewController id="fy8-mu-rBf" customClass="MasaViewController" customModule="PizzeriaIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ga3-cg-ZEp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LabelCellMasa" id="ZkI-dR-QCv">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZkI-dR-QCv" id="FJr-FC-pSH">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="fy8-mu-rBf" id="Cl3-tZ-xAb"/>
+                            <outlet property="delegate" destination="fy8-mu-rBf" id="Mq0-F2-o9S"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Selección de Masa" id="cMm-nZ-SB4">
+                        <barButtonItem key="leftBarButtonItem" image="tamanio" id="AEB-Jf-K6l">
+                            <connections>
+                                <segue destination="Z9F-8R-T4w" kind="show" id="leu-nf-udm"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="queso" id="gvU-TW-us5">
+                            <connections>
+                                <segue destination="b1U-PY-sNB" kind="show" id="mfY-iP-P5n"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="quesoButton" destination="gvU-TW-us5" id="6In-3J-1ze"/>
+                        <outlet property="tamanioButton" destination="cMm-nZ-SB4" id="bjs-3Q-ZD0"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pI2-Lk-EZX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="170" y="-63"/>
+        </scene>
+        <!--Selección de Ingredientes-->
+        <scene sceneID="HzZ-ps-aIt">
+            <objects>
+                <tableViewController id="tSw-yi-kyc" customClass="IngredienteViewController" customModule="PizzeriaIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="OeJ-KT-SRh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LabelCellIngredientes" id="DXg-fo-3Ac">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DXg-fo-3Ac" id="7ld-tz-BOA">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="tSw-yi-kyc" id="vBs-Pz-pfT"/>
+                            <outlet property="delegate" destination="tSw-yi-kyc" id="ZZ2-4e-rze"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Selección de Ingredientes" id="8er-ER-eCZ">
+                        <barButtonItem key="leftBarButtonItem" image="queso" id="l2b-O0-hw9">
+                            <connections>
+                                <segue destination="b1U-PY-sNB" kind="show" id="DIM-qO-Qok"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="pago" id="C4h-HL-4Ik">
+                            <connections>
+                                <segue destination="D7c-YS-mcK" kind="show" id="Tkv-df-pc8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="pagoButton" destination="C4h-HL-4Ik" id="IWO-59-ogy"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rry-CD-gPY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3735.1999999999998" y="-63.418290854572717"/>
+        </scene>
+        <!--Realización del Pago-->
+        <scene sceneID="Imu-cd-dRo">
+            <objects>
+                <viewController id="lfn-dZ-EMv" customClass="PagoViewController" customModule="PizzeriaIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FJF-KZ-LQZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="W0R-u6-5nF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GPW-Ne-fqL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="center" fixedFrame="YES" distribution="fillEqually" alignment="center" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="tDy-PK-bgH">
+                                <rect key="frame" x="57" y="418" width="260" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oEQ-zH-uyz">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Cancelar"/>
+                                        <connections>
+                                            <segue destination="Z9F-8R-T4w" kind="show" id="He1-vS-52i"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ymc-0B-Rn7">
+                                        <rect key="frame" x="180" y="0.0" width="80" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Pagar"/>
+                                        <connections>
+                                            <segue destination="aCp-MH-Xhp" kind="show" id="H45-8l-bly"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lRa-fR-dW1">
+                                <rect key="frame" x="19" y="306" width="316" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Ingredientes:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sE6-nm-25M">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Jamon, Bacon, Carne, Pavo, Chorizo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ebz-Uc-aRU">
+                                        <rect key="frame" x="110" y="0.0" width="206" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HLv-jD-2bZ">
+                                <rect key="frame" x="16" y="251" width="206" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Tipo de Queso:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JoZ-yp-2AF">
+                                        <rect key="frame" x="0.0" y="0.0" width="117" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Mozzarela" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="orQ-ao-rMx">
+                                        <rect key="frame" x="127" y="0.0" width="79" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="msW-ZJ-Jlg">
+                                <rect key="frame" x="19" y="192" width="187" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Tipo de Masa:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ew-iu-BsJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="108" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Crujiente" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Du0-fc-q0w">
+                                        <rect key="frame" x="118" y="0.0" width="69" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6HK-lj-yjo">
+                                <rect key="frame" x="16" y="133" width="143" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Tamaño:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xq1-XT-egh">
+                                        <rect key="frame" x="0.0" y="0.0" width="66" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Pequeña" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UDo-mA-KgX">
+                                        <rect key="frame" x="76" y="0.0" width="67" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Realización del Pago" id="YBL-8I-byB">
+                        <barButtonItem key="leftBarButtonItem" image="ingredientes" id="4sa-q8-94l">
+                            <connections>
+                                <segue destination="pEk-TP-83L" kind="show" id="2Da-9J-nHb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="ingredienteButton" destination="4sa-q8-94l" id="X8O-uF-Y1U"/>
+                        <outlet property="labelIngredientes" destination="ebz-Uc-aRU" id="Fcf-qR-0lq"/>
+                        <outlet property="labelMasa" destination="Du0-fc-q0w" id="NvU-re-J2A"/>
+                        <outlet property="labelQueso" destination="orQ-ao-rMx" id="2AE-c9-Z9a"/>
+                        <outlet property="labelTamanio" destination="UDo-mA-KgX" id="asc-Zy-sek"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4br-72-PHZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5671.1999999999998" y="-63.418290854572717"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="lkT-v1-KNL">
+            <objects>
+                <viewController id="TwR-df-Bxa" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dHo-TC-HUT"/>
+                        <viewControllerLayoutGuide type="bottom" id="LXH-CO-YcV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Rc7-oP-GUf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8j9-ii-LHs">
+                                <rect key="frame" x="154" y="164" width="300" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gracias por su compra" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5wJ-w7-snY">
+                                <rect key="frame" x="37" y="327" width="300" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pedido realizado correctamente" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RAO-rH-v5z">
+                                <rect key="frame" x="65" y="227" width="244" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="xjr-Ao-Fzp">
+                        <barButtonItem key="rightBarButtonItem" title="Nueva" id="3mi-ea-aZX">
+                            <connections>
+                                <segue destination="Z9F-8R-T4w" kind="show" id="MrR-Nc-CH5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JKr-Hh-jzl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7400.8000000000002" y="-63.418290854572717"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wWS-QZ-7uQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Z9F-8R-T4w" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1Bb-3f-Do6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vH6-Kq-jx1" kind="relationship" relationship="rootViewController" id="Ifm-fj-9uW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pz0-UY-S6l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2367" y="-63"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="oj1-my-cOe">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jb6-ad-QhX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OIG-cy-ZkM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fy8-mu-rBf" kind="relationship" relationship="rootViewController" id="G6z-wm-ZgZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="muw-QU-1z4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-769" y="-63"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5Fi-nD-OHZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="b1U-PY-sNB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bRJ-Es-doH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ujr-85-GZN" kind="relationship" relationship="rootViewController" id="bWd-X9-BYA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PJg-pj-BjU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1028" y="-63"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jU6-hG-hIm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pEk-TP-83L" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UaG-NZ-3E0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="tSw-yi-kyc" kind="relationship" relationship="rootViewController" id="Tix-lF-H6d"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gbH-0n-gZl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2796" y="-63.418290854572717"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="WMZ-Mx-BZL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="D7c-YS-mcK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SPq-gn-RIa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="lfn-dZ-EMv" kind="relationship" relationship="rootViewController" id="AZS-Ku-iAQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rbp-lM-nff" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4732" y="-63.418290854572717"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lc4-2X-gBR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aCp-MH-Xhp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Dk9-Yg-Qgm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="TwR-df-Bxa" kind="relationship" relationship="rootViewController" id="0MH-nz-YjY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7XX-JX-u8S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6461.6000000000004" y="-63.418290854572717"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ingredientes" width="32" height="32"/>
+        <image name="masa" width="32" height="32"/>
+        <image name="pago" width="32" height="32"/>
+        <image name="queso" width="32" height="32"/>
+        <image name="tamanio" width="32" height="32"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="He1-vS-52i"/>
+        <segue reference="2Da-9J-nHb"/>
+        <segue reference="2bO-rl-tNk"/>
+        <segue reference="mfY-iP-P5n"/>
+    </inferredMetricsTieBreakers>
+</document>
