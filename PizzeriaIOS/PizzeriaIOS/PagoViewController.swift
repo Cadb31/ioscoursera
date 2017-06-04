@@ -44,6 +44,16 @@ class PagoViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func comprobarPago(_ sender: Any) {
+        
+        if(pizza.tamanio == "" || pizza.masa == "" || pizza.queso == "" || pizza.ingredientes.count < 5){
+            let alertMessage = UIAlertController(title: "Pizza Menu", message:
+                "Falta algun elemento para preparar su pizza. Por favor seleccionalo", preferredStyle: UIAlertControllerStyle.alert)
+            alertMessage.addAction(UIAlertAction(title: "Cerrar", style: UIAlertActionStyle.default,handler: nil))
+            self.present(alertMessage, animated: true, completion: nil)
+        }
+        
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         

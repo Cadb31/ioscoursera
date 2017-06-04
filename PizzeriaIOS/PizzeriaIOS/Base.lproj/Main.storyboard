@@ -207,6 +207,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Pagar"/>
                                         <connections>
+                                            <action selector="comprobarPago:" destination="lfn-dZ-EMv" eventType="touchUpInside" id="yUL-8t-8K3"/>
                                             <segue destination="aCp-MH-Xhp" kind="show" id="H45-8l-bly"/>
                                         </connections>
                                     </button>
