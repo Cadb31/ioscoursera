@@ -71,7 +71,11 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
                     print("Authors: ", author)
                     bookEvent.authors = author
                 }
-                bookEvent.image = book.image
+                if(book.image != nil){
+                    bookEvent.image = book.image
+                }else{
+                    bookEvent.image = nil
+                }
                 // Save the context.
                 do{
                     try context.save()
@@ -100,7 +104,11 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
             let bookDetails = Book()
                 bookDetails.title = bookEntity.title as String!
                 bookDetails.authors.append(bookEntity.authors as String!)
-                bookDetails.image = bookEntity.image as NSObject! as! UIImage
+                
+                let imgObject = bookEntity.image as NSObject!
+                if(imgObject != nil){
+                    bookDetails.image = imgObject as! UIImage
+                }
             let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
             controller.bookDetails = bookDetails
             controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem

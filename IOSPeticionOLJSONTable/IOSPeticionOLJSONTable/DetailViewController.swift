@@ -26,8 +26,10 @@ class DetailViewController: UIViewController {
         for author in bookDetails.authors{
             bookAuthors.text = author
         }
+        if(bookDetails.image != nil){
+            bookImage.image = bookDetails.image
+        }
         
-        bookImage.image = bookDetails.image
     }
 
     override func viewDidLoad() {

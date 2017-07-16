@@ -14,6 +14,6 @@ class Book {
 
     var title: String! = nil
     var authors = [String]()
-    var image: UIImage!
+    var image: UIImage! = nil
     
 }

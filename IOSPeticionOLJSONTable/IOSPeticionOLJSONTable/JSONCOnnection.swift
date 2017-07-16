@@ -39,17 +39,21 @@ class JSONCOnnection{
                     book.authors.append(String(name))
                 }                
             
-                let dicImages: NSDictionary! = dicISBN["cover"] as! NSDictionary
-                if(dicImages != nil){
-                    let image = dicImages["large"] as! NSString
-                    let imageURL = NSURL(string: String(image))
-                    let imageData: NSData! = NSData(contentsOf: imageURL! as URL)
+                if(dicISBN["cover"] != nil){
+                    let dicImages: NSDictionary! = dicISBN["cover"] as! NSDictionary
+                    if(dicImages != nil){
+                        let image = dicImages["large"] as! NSString
+                        let imageURL = NSURL(string: String(image))
+                        let imageData: NSData! = NSData(contentsOf: imageURL! as URL)
             
-                    if(imageData != nil){
-                        if let uiImage = UIImage(data: imageData! as Data){
-                            book.image = uiImage
+                        if(imageData != nil){
+                            if let uiImage = UIImage(data: imageData! as Data){
+                                book.image = uiImage
+                            }
                         }
                     }
+                }else{
+                    book.image = nil
                 }
             }
 
